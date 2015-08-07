@@ -22,7 +22,7 @@ public class TestMain1
 {
     public static void main(String[] args)
     {
-
+/*
         Cart cart = new Cart();
         cart.setName("PCart");
         cart.setId(2);
@@ -51,7 +51,7 @@ public class TestMain1
 
 
 
-
+*/
     }
 
 
