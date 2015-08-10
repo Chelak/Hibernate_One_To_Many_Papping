@@ -2,6 +2,7 @@ package com.app.dao;
 
 import com.app.domain.Items;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Set;
  */
 public interface ItemDAO
 {
-    public Set<Items> findAll();
+    public List<Items> findAll();
     public Items findByID(Long itemId);
     public void addItem(Items items);
     public void editItem(Items items, Long itemId);

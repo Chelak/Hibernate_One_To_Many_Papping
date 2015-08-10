@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -17,8 +18,18 @@ public class ItemDaoImpl implements ItemDAO {
 
 
 
-    public Set<Items> findAll() {
-        return null;
+
+    public List<Items> findAll() {
+
+
+            sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.getCurrentSession();
+            System.out.println("Session created");
+            List <Items> items =  session.createCriteria(Items.class).list();
+            session.close();
+
+        return items;
+
     }
 
     public Items findByID(Long itemId) {

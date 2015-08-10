@@ -13,6 +13,7 @@ import org.hibernate.Transaction;
 
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -52,6 +53,14 @@ public class TestMain1
 
 
 */
+            ItemDAO itemDAO = new ItemDaoImpl();
+            List<Items> items = itemDAO.findAll();
+
+            for (Items items1 : items)
+            {
+                    System.out.println(items1.toString());
+            }
+
     }
 
 
